@@ -6,7 +6,7 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let commonConfig = require('./webpack.config.common.js');
 
-let proConfig = {
+let devConfig = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, '../dev')
@@ -29,4 +29,4 @@ let proConfig = {
     ]
 }
 
-module.exports = merge(commonConfig, proConfig);
+module.exports = merge(commonConfig, devConfig);
