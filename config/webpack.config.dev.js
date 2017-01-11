@@ -17,11 +17,7 @@ let devConfig = {
                 dev: true
             }
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-            file: '[name].js',
-            minChunks: 2
-        }),
+
         new HtmlPlugin({
             template: path.resolve(__dirname, '../src/index.html')
         }),

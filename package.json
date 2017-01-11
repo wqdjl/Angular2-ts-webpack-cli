@@ -4,8 +4,8 @@
   "description": "This is books management website",
   "main": "index.html",
   "scripts": {
-    "server:dev": "set NODE_ENV=dev&& webpack-dev-server --inline --progress",
-    "webpack:dev": "set NODE_ENV=dev&& webpack  --progress",
+    "server:dev": "set NODE_ENV=dev&& webpack-dev-server --watch --inline --progress",
+    "webpack:dev": "set NODE_ENV=dev&& webpack --watch  --progress",
     "webpack:rePro": "set NODE_ENV=pro&& webpack -p --progress --config ./config/webpack.config.dll.js&& webpack  --progress",
     "webpack:pro": "set NODE_ENV=pro&& webpack  --progress",
     "webpack:dll": "webpack --config ./config/webpack.config.dll.js",
@@ -49,6 +49,7 @@
     "typescript": "^2.0.10",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^2.3.1"
   }
 }

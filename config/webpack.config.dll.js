@@ -41,9 +41,16 @@ let dllConfig = {
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
-            compress: true,
+            beautify:false,
+            comments: false,
+            compress: {
+                warning:false,
+                drop_console:true,
+                collapse_vars:true,
+                reduce_vars:true
+            },
             mangle: true,
-            comments: false
+           
         }),
         new HtmlPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
